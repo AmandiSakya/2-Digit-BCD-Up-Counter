@@ -1,5 +1,5 @@
 # 2-Digit-BCD-Up-Counter
-A project done for the Digital Electronics module | Year 1 Semester 2 |
+Final project done for the Digital Electronics module | Year 1 Semester 2 |
 
 # 1. INTRODUCTION
 BCD counters are fundamental in digital systems which represent human readable decimal digits from 0 to 9 using binary representation. Unlike standard binary counters, a 2-digit BCD counter treats each digit as a 4-bit nibble that resets after reaching 9 (10012). Traditional counters continuously count and require manual monitoring. This can cause human errors such as inaccurate stopping and inefficient operation. This project focuses on design and simulating a programmable version that allows a user to preset a target value, which the system must automatically detect to halt operations using Proteus.

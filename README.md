@@ -9,7 +9,7 @@ In many digital counting and monitoring systems, it is necessary to accurately t
 
 # 3. SYSTEM DESIGN AND CIRCUIT EXPLANATION
 
-# 3.1 System Architecture\
+# 3.1 System Architecture
 The proposed system consists of three main stages: the input Stage (clock generator, push buttons, and target logic states), the processing stage (74LS192 BCD counters, 74LS85 comparators, logic gates and flip-flop) and the output stage (two 7-segment displays and LED).
 
 # 3.2 Two-Digit BCD Counter Implementation

@@ -22,8 +22,8 @@ the target is reached by blinking LED.
 3.5 Output Display and Status Indication\
 The BCD outputs are sent to Seven-Segment Displays (using internal or external decoders like the 74LS47) to provide real-time visual feedback. Additionally a status LED was connected to the final output to indicate successful target detection.
 
-5. OBSERVATIONS AND POSSIBLE ENHANCEMENTS
+5. OBSERVATIONS AND POSSIBLE ENHANCEMENTS\
 The simulation results show that the system performs with high accuracy, stability and reliability. The simulation only started when the start push button was pressed even though the run icon was also activated. The counter consistently stopped exactly at the predefined target value, confirming the correct operation of the comparator logic. Additionally, the reset and resume push buttons also worked properly during simulation. For future improvements, the system can be enhanced to include a ‘millisecond’ countdown running in parallel with the existing countdown. This would improve timing precision and make the system more suitable for real-time applications. Additionally, the circuit can be expanded with more precise optional features such as a buzzer along with an LED to give both sound and light signals when the target value is reached.
 
-6. CONCLUSION
+6. CONCLUSION\
 This project has successfully implemented a programmable BCD counter using TTL logic ICs. By integrating the 74LS192 counters r with 74LS85 comparators, the system is able to perform automatic stop operation without any software program involved.

@@ -7,31 +7,17 @@ In many digital counting and monitoring systems, it is necessary to accurately t
 
 3. SYSTEM DESIGN AND CIRCUIT EXPLANATION\
 3.1 System Architecture\
-The proposed system consists of three main stages: the input Stage (clock generator,
-push buttons, and target logic states), the processing stage (74LS192 BCD counters,
-74LS85 comparators, logic gates and flip-flop) and the output stage (two 7-segment
-displays and LED).
+The proposed system consists of three main stages: the input Stage (clock generator, push buttons, and target logic states), the processing stage (74LS192 BCD counters, 74LS85 comparators, logic gates and flip-flop) and the output stage (two 7-segment displays and LED).
 
 3.2 Two-Digit BCD Counter Implementation\
-Counting section was implemented using Two cascaded 74LS192 counters. One
-counter handles one’s digits and the other counter handles tens digits. The Carry output
-of first counter was connected to the clock input of second counter to count 00 to 99.
-All counters are connected to a common Reset push button to reset the display to 00.
-3.3 Target Value Comparator
+Counting section was implemented using Two cascaded 74LS192 counters. One counter handles one’s digits and the other counter handles tens digits. The Carry output of first counter was connected to the clock input of second counter to count 00 to 99. All counters are connected to a common Reset push button to reset the display to 00.
 
-Used two 74LS85 comparators to compare current count and target value. Eight
-LogicState inputs were used to set the target value manually in BCD format. Equality
-outputs from both comparators were connected to an AND gate so that the final output
-becomes HIGH only when both digits of the current counter value match the preset
-target value.
+3.3 Target Value Comparator
+Used two 74LS85 comparators to compare current count and target value. Eight LogicState inputs were used to set the target value manually in BCD format. Equality outputs from both comparators were connected to an AND gate so that the final output becomes HIGH only when both digits of the current counter value match the preset target value.
 
 3.4 Clock Control and Automatic Stop Mechanism\
-When the comparator output detects A = B, it activates a Flip-Flop that disables the
-clock pulse to the counters. As a result the counting operation automatically stopped
-and the final count value remains fixed on the display. This same signal activates when
+When the comparator output detects A = B, it activates a Flip-Flop that disables the clock pulse to the counters. As a result the counting operation automatically stopped and the final count value remains fixed on the display. This same signal activates when
 the target is reached by blinking LED.
 
 3.5 Output Display and Status Indication\
-The BCD outputs are sent to Seven-Segment Displays (using internal or external
-decoders like the 74LS47) to provide real-time visual feedback. Additionally a status
-LED was connected to the final output to indicate successful target detection.
+The BCD outputs are sent to Seven-Segment Displays (using internal or external decoders like the 74LS47) to provide real-time visual feedback. Additionally a status LED was connected to the final output to indicate successful target detection.
